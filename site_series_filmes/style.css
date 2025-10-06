@@ -1,66 +1,102 @@
-body{
-font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-color:#ffffff;
-text-align: center;
-font-size:large;
-background: #000000;
-justify-content: center;
-line-height: 1.6;
-padding: 20px;
-}
+/* Reset básico */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-header {
-    background-color: #222;
-    color: white;
-    padding: 20px 0;
+/* Corpo da página */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #111; /* fundo escuro */
+    color: #ffd700; /* fonte amarela */
     text-align: center;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #000;
+    padding: 20px;
+    border-bottom: 2px solid #ffd700;
 }
 
 header h1 {
+    font-size: 2.5em;
     margin-bottom: 10px;
 }
 
-nav a {
-    color: white;
+header nav a {
+    color: #ffd700;
     text-decoration: none;
-    margin: 0 15px;
+    margin: 0 20px;
     font-weight: bold;
+    font-size: 1.1em;
+    transition: color 0.3s;
 }
 
-nav a:hover {
+header nav a:hover {
+    color: #ffffff;
+}
+
+/* Seções */
+main {
+    padding: 20px;
+}
+
+h2 {
+    font-size: 2em;
+    margin: 25px 0 15px 0;
     text-decoration: underline;
 }
 
-main {
-    max-width: 1000px;
-    margin: 20px auto;
-    padding: 0 20px;
-}
-
-section {
+/* Container dos cards */
+.card-container {
+    display: flex;
+    justify-content: center; /* centraliza horizontalmente */
+    gap: 20px; /* espaço entre cards */
+    flex-wrap: wrap; /* quebra linha se necessário */
     margin-bottom: 30px;
 }
 
+/* Cards individuais */
 .card {
-    justify-content:center;
-    gap: 20px;
-    flex-wrap: wrap;
-    margin-top: 20px;
-}
-
-footer {
     background-color: #222;
-    color: white;
+    border: 2px solid #ffd700;
+    border-radius: 10px;
+    padding: 15px;
+    max-width: 300px;
     text-align: center;
-    padding: 15px 0;
-    margin-top: 40px;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
+.card h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
 
+.card img {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
 
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #ffd700;
+}
 
+/* Parágrafo geral */
+p {
+    font-size: 1.1em;
+    line-height: 1.4;
+    margin-bottom: 20px;
+}
+
+/* Footer */
+footer {
+    background-color: #000;
+    padding: 15px;
+    border-top: 2px solid #ffd700;
+    margin-top: 30px;
+    font-size: 0.9em;
+}

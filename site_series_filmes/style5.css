@@ -1,0 +1,75 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo da página */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #111; /* fundo escuro */
+    color: #ffd700; /* fonte amarela */
+    text-align: center;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #000;
+    padding: 20px;
+    border-bottom: 2px solid #ffd700;
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+header nav a {
+    color: #ffd700;
+    text-decoration: none;
+    margin: 0 20px;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: color 0.3s;
+}
+
+header nav a:hover {
+    color: #ffffff;
+}
+
+/* Main e cards */
+main {
+    padding: 20px;
+}
+
+h2 {
+    margin-bottom: 20px;
+    text-decoration: underline;
+}
+
+/* Cards de filmes */
+.filme {
+    background-color: #222;
+    border: 1px solid #ffd700;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 15px auto;
+    width: 80%;
+    max-width: 600px;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.filme:hover {
+    transform: scale(1.02);
+    background-color: #333;
+}
+
+/* Footer */
+footer {
+    background-color: #000;
+    padding: 15px;
+    border-top: 2px solid #ffd700;
+    margin-top: 30px;
+    font-size: 0.9em;
+}
