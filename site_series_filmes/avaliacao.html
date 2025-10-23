@@ -1,104 +1,70 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Favoritos</title>
-    <link rel="stylesheet" href="style4.css">
+    <title>Formulário de Avaliação</title>
+
+    <link rel="stylesheet" href="style3.css">
 </head>
 
 <body>
     <header>
+        <h1>Filmes Premiados</h1>
         <nav>
-            <h1>My list</h1>
             <a href="index.html">Início</a>
             <a href="index2.html">Novidades e Sugestões</a>
+            <a href="favoritos.html">Favoritos</a>
             <a href="tabela.html">Tabela</a>
-            <a href="avaliacao.html">Avaliação</a>
         </nav>
     </header>
 
     <main>
-        <section class="favoritos">
-            <h1 class="titulo-secao">🎬 Filmes</h1>
-            <div class="card-conteiner">
+        <h1>Formulário</h1>
 
-                <div class="card">
-                    <h2><i>Círculo de Fogo (2013)</i></h2>
-                    <img src="IMG/Circulo de Fogo.jpg" alt="Círculo de Fogo">
-                    <p>
-                        Criaturas monstruosas conhecidas como Kaiju começam a emergir do mar.
-                        Para combatê-los, a humanidade desenvolve robôs gigantescos chamados Jaegers.
-                    </p>
-                    <p><strong>Gênero:</strong> Ação e ficção científica</p>
-                    <p><strong>Duração:</strong> 2h 11m</p>
-                </div>
+        <form id="formAvaliacao">
+            <fieldset>
+                <legend>Formulário de Avaliação</legend>
 
-                <div class="card">
-                    <h2><i>Transformers (2007)</i></h2>
-                    <img src="IMG/Transformers.jpg" alt="Transformers">
-                    <p>
-                        Duas raças de robôs, Autobots e Decepticons, chegam à Terra e travam
-                        uma batalha que pode definir o destino da humanidade.
-                    </p>
-                    <p><strong>Gênero:</strong> Ação e ficção científica</p>
-                    <p><strong>Duração:</strong> 2h 24m</p>
-                </div>
+                <p>
+                    <label for="nome">Nome (obrigatório):</label><br>
+                    <input type="text" id="nome" name="nome" required placeholder="Seu nome completo">
+                </p>
 
-                <div class="card">
-                    <h2><i>G.I. Joe: A Origem de Cobra (2009)</i></h2>
-                    <img src="IMG/MV5gi joe origem de cobra.jpg" alt="G.I. Joe">
-                    <p>
-                        Uma equipe de elite enfrenta um traficante de armas e a organização Cobra
-                        usando alta tecnologia e treinamento militar.
-                    </p>
-                    <p><strong>Gênero:</strong> Ação e ficção científica</p>
-                    <p><strong>Duração:</strong> 1h 59m</p>
-                </div>
-            </div>
-        </section>
+                <p>
+                    <label for="titulo">Série ou filme preferido:</label><br>
+                    <input type="text" id="titulo" name="titulo" placeholder="Ex.: Parasita, Breaking Bad">
+                </p>
 
-        <section class="favoritos">
-            <h1 class="titulo-secao">📺 Séries</h1>
-            <div class="card-conteiner">
+                <p>
+                    <label for="nota">Nota (0 a 10):</label><br>
+                    <input type="number" id="nota" name="nota" min="0" max="10" step="0.1" placeholder="0 - 10">
+                </p>
 
-                <div class="card">
-                    <h2><i>The Pitt (2025)</i></h2>
-                    <img src="IMG/The Pitt.jpg" alt="The Pitt">
-                    <p>
-                        Uma análise realista dos desafios enfrentados por profissionais de saúde em um hospital moderno
-                        de Pittsburgh, EUA.
-                    </p>
-                    <p><strong>Gênero:</strong> Drama médico</p>
-                    <p><strong>Temporadas:</strong> 1</p>
-                </div>
+                <p>
+                    <label for="datetime">Data e hora que assistiu:</label><br>
+                    <input type="datetime-local" id="datetime" name="datetime">
+                </p>
 
-                <div class="card">
-                    <h2><i>Mr. Robot (2015)</i></h2>
-                    <img src="IMG/mr-robot.jpg" alt="Mr. Robot">
-                    <p>
-                        Elliot, um hacker talentoso, é recrutado para destruir a empresa que ele protege como engenheiro
-                        de segurança cibernética.
-                    </p>
-                    <p><strong>Gênero:</strong> Thriller</p>
-                    <p><strong>Temporadas:</strong> 4</p>
-                </div>
+                <p>
+                    <label for="avaliacao">Avaliação (range):</label><br>
+                    <input type="range" id="avaliacao" name="avaliacao" min="0" max="10" step="1">
+                </p>
 
-                <div class="card">
-                    <h2><i>The Boys (2019)</i></h2>
-                    <img src="IMG/The boys.jpg" alt="The Boys">
-                    <p>
-                        Super-heróis adorados pelo público escondem um lado sombrio, e um grupo de vigilantes decide
-                        enfrentá-los.
-                    </p>
-                    <p><strong>Gênero:</strong> Ação e drama</p>
-                    <p><strong>Temporadas:</strong> 4</p>
-                </div>
-            </div>
-        </section>
+                <p>
+                    <button type="submit">Enviar</button>
+                </p>
+
+            </fieldset>
+        </form>
+
+        <div class="mensagem" id="mensagem"></div>
+
+        <p style="text-align: center;">
+            <button id="botaoCor">Mudar Cor de Fundo</button>
+        </p>
     </main>
-
 
     <!-- 🕒 Rodapé com data/hora -->
     <footer>
