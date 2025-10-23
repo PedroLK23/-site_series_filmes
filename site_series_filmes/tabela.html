@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tabela</title>
-    <link rel="stylesheet" href="style4.css">
+    <link rel="stylesheet" href="style5.css">
 </head>
 
 <body>
@@ -13,23 +13,22 @@
         <nav>
             <h1>Tabela</h1>
             <a href="index.html">Início</a>
-            <a href="favoritos.html">Favoritos</a>
             <a href="index2.html">Novidades e Sugestões</a>
-            <a href="contato.html">Contato</a>
+            <a href="favoritos.html">Favoritos</a>
+            <a href="avaliacao.html">Avaliação</a>
         </nav>
     </header>
 
     <main>
         <div class="tabela">
             <h1>Séries</h1>
-            <table border="1" cellpadding="8" cellspacing="0">
-                <thead>
-                    <tr>
-                        <th>Título</th>
-                        <th>Ano</th>
-                        <th>Gênero</th>
-                        <th>Nota</th>
-                    </tr>
+            <table id="tabelaSeries" border="1" cellpadding="8" cellspacing="0">
+                <tr>
+                    <th>Título</th>
+                    <th>Ano</th>
+                    <th>Gênero</th>
+                    <th>Nota</th>
+                </tr>
                 </thead>
                 <tbody>
                     <tr>
@@ -95,12 +94,10 @@
                 </tbody>
             </table>
         </div>
-    </main>
 
-    <main>
         <div class="series">
             <h1>Filmes</h1>
-            <table border="1" cellpadding="8" cellspacing="0">
+            <table id="tabelaFilmes" border="1" cellpadding="8" cellspacing="0">
                 <thead>
                     <tr>
                         <th>Título</th>
@@ -173,11 +170,19 @@
                 </tbody>
             </table>
         </div>
-    </main>
+        
+        <!-- Botão para calcular média -->
+        <button id="btnCalcularMedia" onclick="calcularMedia()">Calcular Média Geral</button>
     
+    </main>
+
+    <!-- 🕒 Rodapé com data/hora -->
     <footer>
-        <p>&copy; 2025 Séries e Filmes. Todos os direitos reservados.</p>
+        <p>&copy; 2025 Filmes Premiados. Todos os direitos reservados.</p>
+        <p id="dataAtual"></p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
